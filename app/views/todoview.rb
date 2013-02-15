@@ -30,7 +30,3 @@ module ToDoView
     puts "  help\t\t\tDisplay this message."
   end
 end
-
-
-ToDoView.confirm_delete
-
