@@ -7,6 +7,10 @@ module ToDoView
     puts "Deleting your task...."
   end
 
+  def self.confirm_complete
+    puts "Task is complete."
+  end
+  
   def self.display_header
     puts "**********************************************"
     puts "Task List".rjust(25)
