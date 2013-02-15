@@ -9,7 +9,7 @@ module ToDoView
 
   def self.display_header
     puts "**********************************************"
-    puts "Task List".rjust(20)
+    puts "Task List".rjust(25)
     puts "**********************************************"
   end
 
