@@ -1,6 +1,9 @@
 require 'rake'
 require 'rspec/core/rake_task'
+require 'faker'
+
 require_relative 'db/config'
+require_relative 'app/models/task'
 
 
 desc "create the database"
@@ -24,6 +27,11 @@ end
 
 desc "populate the test database with sample data"
 task "db:populate" do
+  100.times do
+    task = Faker::Lorem.sentence
+    completed = [true, false].sample
+    Task.new(:text => task, :completed => completed).save!
+  end
 end
 
 desc 'Retrieves the current schema version number'
