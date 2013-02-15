@@ -8,28 +8,39 @@ class ToDoController
     command = ARGV.shift
 
     case command
-      when "add"
+    when "add"
+      if ARGV.first.blank?
+        ToDoView.error
+      else
         Task.add(ARGV.join(' '))
         ToDoView.confirm_add
-      when "complete"
+      end
+    when "complete"
+      if ARGV.first !~ /\d+/
+        ToDoView.error
+      else
         Task.complete(ARGV.shift)
         ToDoView.confirm_complete
-      when "delete"
+      end
+    when "delete"
+      if ARGV.first !~ /\d+/
+        ToDoView.error
+      else
         Task.delete(ARGV)
         ToDoView.confirm_delete
-      when "list"
-        ToDoView.display_header
-        list = Task.find :all
-        list.each do |task|
-          ToDoView.print(task.id, task.text, task.completed)
-        end
-      when "help"
-        ToDoView.help
-      else
-        ToDoView.error
+      end
+    when "list"
+      ToDoView.display_header
+      list = Task.find(:all)
+      list.each do |task|
+        ToDoView.print(task.id, task.text, task.completed)
+      end
+    when "help"
+      ToDoView.help
+    else
+      ToDoView.error
     end
   end
 end
-
 #temporary driver code for testing
 ToDoController.run!
