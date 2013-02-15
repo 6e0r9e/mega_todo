@@ -13,8 +13,8 @@ class ToDoView
     puts "**********************************************"
   end
 
-  def list_tasks 
-    
+  def print(task)
+    puts task
   end
 
   def help
