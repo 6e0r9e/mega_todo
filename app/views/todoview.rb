@@ -13,8 +13,8 @@ module ToDoView
     puts "**********************************************"
   end
 
-  def self.print(task, status, id)
-     
+  def self.print(id, task, status)
+     puts "#{id}, #{task}, #{status}"
   end
 
   def self.error
@@ -33,3 +33,4 @@ end
 
 
 ToDoView.confirm_delete
+
