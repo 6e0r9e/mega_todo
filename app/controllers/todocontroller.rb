@@ -42,5 +42,3 @@ class ToDoController
     end
   end
 end
-#temporary driver code for testing
-ToDoController.run!

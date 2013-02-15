@@ -1,5 +1,5 @@
 module ToDoView 
-
+  require 'artii'
   RESET ="\e[0m"
   GREEN = "\e[0;32m"
   RED = "\e[0;31m"
@@ -26,6 +26,10 @@ module ToDoView
   end
   
   def self.display_header
+    clear_screen!
+    move_to_home!
+    color_print(`artii 'MEGA TASK'`, YELLOW)
+    sleep(0.5)
     color_print("**********************************************", BOLD_PURPLE)
     color_print("Task List".rjust(25), BOLD_CYAN)
     color_print("**********************************************", BOLD_PURPLE)
