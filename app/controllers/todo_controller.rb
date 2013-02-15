@@ -33,7 +33,7 @@ class ToDoController
       ToDoView.display_header
       list = Task.find(:all)
       list.each do |task|
-        ToDoView.print(task.id, task.text, task.completed)
+        ToDoView.print_task(task.id, task.text, task.completed)
       end
     when "help"
       ToDoView.help
