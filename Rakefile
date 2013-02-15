@@ -1,5 +1,5 @@
 require 'rake'
-require 'rspec/core/rake_task'
+# require 'rspec/core/rake_task'
 require 'faker'
 
 require_relative 'db/config'
@@ -39,7 +39,6 @@ task "db:version" do
   puts "Current version: #{ActiveRecord::Migrator.current_version}"
 end
 
-desc "Run the specs"
-RSpec::Core::RakeTask.new(:specs)
-
-task :default  => :specs
+# desc "Run the specs"
+# RSpec::Core::RakeTask.new(:specs)
+# task :default  => :specs
