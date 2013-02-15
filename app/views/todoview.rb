@@ -9,7 +9,8 @@ class ToDoView
 
   def display_header
     puts "**********************************************"
-    puts "Task List".rjust()
+    puts "Task List".rjust(20)
+    puts "**********************************************"
   end
 
   def list_tasks 
