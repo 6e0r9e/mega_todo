@@ -1,3 +1,5 @@
 require_relative '../../db/config'
 
-# implement your Student model here
+class Task < ActiveRecord::Base
+  validates_presence_of :text 
+end
