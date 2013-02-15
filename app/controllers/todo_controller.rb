@@ -16,6 +16,7 @@ class ToDoController
       when "delete"
         Task.delete(ARGV)
       when "complete"
+        Task.complete(ARGV.shift)
       when "help"
       else
         View.error
