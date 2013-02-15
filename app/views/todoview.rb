@@ -1,10 +1,10 @@
 module ToDoView 
   def self.confirm_add
-    puts "Adding task now"
+    puts "Adding task now...."
   end
 
   def self.confirm_delete
-    puts "Deleting your task"
+    puts "Deleting your task...."
   end
 
   def self.display_header
@@ -14,7 +14,7 @@ module ToDoView
   end
 
   def self.print(task, status, id)
-    puts 
+     
   end
 
   def self.error
@@ -32,4 +32,4 @@ module ToDoView
 end
 
 
-ToDoView.display_header
+ToDoView.confirm_delete
