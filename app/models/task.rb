@@ -10,6 +10,7 @@ class Task < ActiveRecord::Base
   def self.delete(id)
     Task.destroy(id)
   end
+
   def self.complete(id)
    Task.update(id, :completed => true) 
   end
