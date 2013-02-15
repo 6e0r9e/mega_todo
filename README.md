@@ -2,6 +2,10 @@ Todo 1.0
 
 A reimplementation of [megtodo](https://github.com/enocom/megtodo), this time using ActiveRecord.
 
+This marks the completion of our MVP. 
+
+Now, the fun begins...
+
 
 Installation
 ------------
