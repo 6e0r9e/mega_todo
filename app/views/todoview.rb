@@ -1,23 +1,35 @@
-class ToDoView 
-  def confirm_add
+module ToDoView 
+  def self.confirm_add
     puts "Adding task now"
   end
 
-  def confirm_delete
+  def self.confirm_delete
     puts "Deleting your task"
   end
 
-  def display_header
+  def self.display_header
     puts "**********************************************"
     puts "Task List".rjust(20)
     puts "**********************************************"
   end
 
-  def print(task)
-    puts task
+  def self.print(task, status, id)
+    puts 
   end
 
-  def help
+  def self.error
+    puts "Invalid command. Type <help> for possible commands."
+  end
+
+  def self.help
+    puts "Here are the commands:"
+    puts "  add <text of task>\tAdd a new task"
+    puts "  list\t\t\tList all tasks"
+    puts "  delete <task_id>\tDelete a task by ID number"
+    puts "  complete <task_id>\tMark task as complete by ID number"
+    puts "  help\t\t\tDisplay this message."
   end
 end
 
+
+ToDoView.display_header
