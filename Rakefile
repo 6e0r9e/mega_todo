@@ -34,6 +34,15 @@ task "db:populate" do
   end
 end
 
+desc "populate the test database with test sample data for the view"
+task "db:test_populate" do
+  10.times do
+    task = Faker::Lorem.sentence
+    completed = [true, false].sample
+    Task.new(:text => task, :completed => completed).save!
+  end
+end
+
 desc 'Retrieves the current schema version number'
 task "db:version" do
   puts "Current version: #{ActiveRecord::Migrator.current_version}"
