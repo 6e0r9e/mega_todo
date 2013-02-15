@@ -18,7 +18,7 @@ module ToDoView
   end
 
   def self.print(id, task, status)
-     puts "#{id}, #{task}, #{status}"
+     puts "#{id}. #{task}, #{status}"
   end
 
   def self.error

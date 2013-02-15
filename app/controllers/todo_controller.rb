@@ -1,8 +1,7 @@
 require 'sqlite3'
-require 'pp'
 
 require_relative '../models/task'
-# require_relative '../views/todo_view'
+require_relative '../views/todoview'
 
 class ToDoController
   def self.run!
@@ -19,6 +18,7 @@ class ToDoController
         Task.delete(ARGV)
         ToDoView.confirm_delete
       when "list"
+        ToDoView.display_header
         list = Task.find :all
         list.each do |task|
           ToDoView.print(task.id, task.text, task.completed)
