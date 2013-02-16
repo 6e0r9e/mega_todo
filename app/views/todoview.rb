@@ -35,8 +35,16 @@ module ToDoView
     color_print("**********************************************", BOLD_PURPLE)
   end
 
+  def self.interpret_task_status(status)
+    if status = true 
+      'complete'
+    elsif status = false 
+      'incomplete'
+    end 
+  end 
+
   def self.print_task(id, task, status)
-     color_print("#{id}. #{task}, #{status}", CYAN)
+     color_print("#{id}. #{task} ~ #{interpret_task_status(status)}", CYAN)
   end
 
   def self.error
