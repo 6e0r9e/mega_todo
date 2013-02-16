@@ -1,4 +1,5 @@
-Todo 1.0
+MEGA Todo 0.1
+-------------
 
 A reimplementation of [megtodo](https://github.com/enocom/megtodo), this time using ActiveRecord.
 
@@ -41,7 +42,10 @@ and VOILA!! A populated, working database to test on!
 
 Colophon
 --------
-Mega ToDo was written by [Alyssa](https://github.com/alyraz), [George](https://github.com/6e0r9e), [Matthew](https://github.com/matthewhaguemh), and me one afternoon at [DevBootcamp](http://www.devbootcamp.com).
+
+MEGA is [Matthew](https://github.com/matthewhaguemh), [Eno](https://github.com/enocom), [George](https://github.com/6e0r9e), and [Alyssa](https://github.com/alyraz).
+
+Mega ToDo was written one afternoon at [DevBootcamp](http://www.devbootcamp.com).
 
 Screenshot
 ----------
