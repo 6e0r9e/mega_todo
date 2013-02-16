@@ -27,3 +27,6 @@ Mega ToDo was written by [Alyssa](https://github.com/alyraz), [George](https://g
 Screenshot
 ----------
 
+Now with bash colors!!!!
+
+![Screenshot](https://raw.github.com/enocom/mega_todo/master/screen_shot.png)
