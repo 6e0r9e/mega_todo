@@ -10,12 +10,16 @@ module ToDoView
   BOLD_CYAN = "\e[1;96m"
 
   def self.confirm_add
+    clear_screen!
+    move_to_home!
     color_print("\n\nAdding task now....", RED)
     rainbow_triangle
     color_print("Your task has been added!\n\n", PURPLE)
   end
 
   def self.confirm_delete
+    clear_screen!
+    move_to_home!
     color_print("\n\nDeleting your task....", RED)
     rainbow_triangle
     color_print("Your task has been deleted!\n\n", PURPLE)
@@ -36,15 +40,16 @@ module ToDoView
   end
 
   def self.interpret_task_status(status)
-    if status = true 
-      'complete'
-    elsif status = false 
-      'incomplete'
+    if status == true 
+      '[ ]'
+    elsif status == false 
+      '[x]'
     end 
   end 
 
   def self.print_task(id, task, status)
-     color_print("#{id}. #{task} ~ #{interpret_task_status(status)}", CYAN)
+    color_print("#{interpret_task_status(status)}  #{id}. #{task}", CYAN)
+    sleep(0.1)
   end
 
   def self.error
