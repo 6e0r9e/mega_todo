@@ -16,7 +16,7 @@ Run ```bundle``` first! Then, migrate the database with:
 rake db:migrate
 ```
 
-Finally, to soft link the app. From the top level directory of the application, the command is:
+Finally, soft link the app. From the top level directory of the application repo, the command is:
 
 ```
 ln -s ./todo /usr/local/bin/todo
@@ -30,7 +30,7 @@ After adding a soft link, run ```todo help``` for available commands.
 Testing
 -------
 
-For manual testing using ```sqlite3```, make sure the populate the database.
+For manual testing using ```sqlite3```, make sure to populate the database.
 
 ```
 rake db:populate
